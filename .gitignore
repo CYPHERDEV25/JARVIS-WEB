@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+venvJs/
+
+# Environment
+.env
+.env.local
+*.env
+!*.env.example
+
+# Build
+.next/
+out/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs & data
+*.log
+postgres_data/
+ollama_data/
+
+# Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Models cache
+.cache/
+models/
