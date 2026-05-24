@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { Plus, MessageSquare, Trash2, Settings, Zap } from 'lucide-react';
 import { Conversation } from '../lib/chat-api';

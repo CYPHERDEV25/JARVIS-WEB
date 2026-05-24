@@ -3,7 +3,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ChatSidebar from '../components/ChatSidebar';
 import ChatMessage from '../components/ChatMessage';
-import ChatInput from '../components/ChatInput';
+import dynamic from 'next/dynamic';
+const ChatInput = dynamic(() => import('../components/ChatInput'), { ssr: false });
 import { ChatApi, Conversation, ChatMessage as IChatMessage } from '../lib/chat-api';
 import { Zap, Code, Globe, Menu } from 'lucide-react';
 

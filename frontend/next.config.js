@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  output: "standalone",
-};
-
-module.exports = nextConfig;
+  output: 'standalone',
+  experimental: {
+    serverComponentsExternalPackages: []
+  }
+}
+module.exports = nextConfig

@@ -1,3 +1,4 @@
+'use client'
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Square, Paperclip, X } from 'lucide-react';
 import * as pdfjsLib from 'pdfjs-dist';

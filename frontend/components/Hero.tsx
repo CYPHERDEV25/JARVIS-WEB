@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import ArcReactor from "@/components/ArcReactor";
+import dynamic from 'next/dynamic';
+const ArcReactor = dynamic(() => import('@/components/ArcReactor'), { ssr: false });
 import ParticleBackground from "@/components/ParticleBackground";
 
 const SUBTITLE = "Just A Rather Very Intelligent System";
@@ -51,9 +52,8 @@ export default function Hero() {
         >
           J.A.R.V.I.S
           <span
-            className={`inline-block w-[3px] h-[0.85em] bg-jarvis-primary ml-1 align-middle ${
-              showCursor ? "opacity-100" : "opacity-0"
-            }`}
+            className={`inline-block w-[3px] h-[0.85em] bg-jarvis-primary ml-1 align-middle ${showCursor ? "opacity-100" : "opacity-0"
+              }`}
           />
         </motion.h1>
 
