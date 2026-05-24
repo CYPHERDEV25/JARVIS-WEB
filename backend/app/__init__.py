@@ -1,0 +1,1 @@
+"""JARVIS Platform Backend Application."""
