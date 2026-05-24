@@ -39,4 +39,4 @@ ollama_data/
 
 # Models cache
 .cache/
-models/
+
