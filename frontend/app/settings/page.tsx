@@ -34,7 +34,7 @@ export default function SettingsPage() {
   const checkOllamaStatus = async () => {
     setOllamaStatus('checking');
     try {
-      const res = await fetch('http://localhost:11434/api/tags');
+      const res = await fetch('https://romeoraj-ollama.hf.space/api/tags');
       if (res.ok) {
         setOllamaStatus('online');
       } else {

@@ -19,7 +19,7 @@ export interface Conversation {
 
 const STORAGE_KEY_CONVS = 'jarvis_conversations';
 const STORAGE_KEY_MSGS = 'jarvis_messages_';
-const OLLAMA_URL = 'http://localhost:11434/api/chat';
+const OLLAMA_URL = 'https://romeoraj-ollama.hf.space/api/chat';
 const OLLAMA_MODEL = 'llama3.1:8b';
 
 export class ChatApi {
@@ -162,7 +162,7 @@ If asked who made you, say: "I am Jarvis, your personal AI assistant."`
       });
 
       if (!res.ok) {
-        throw new Error('Jarvis is offline. Make sure Ollama is running on port 11434.');
+        throw new Error('Jarvis is offline. Make sure Ollama is running.');
       }
 
       if (!res.body) throw new Error('ReadableStream not supported');
@@ -215,7 +215,7 @@ If asked who made you, say: "I am Jarvis, your personal AI assistant."`
       
     } catch (error) {
       console.error(error);
-      throw new Error('⚠️ Jarvis is offline. Make sure Ollama is running on port 11434.');
+      throw new Error('⚠️ Jarvis is offline. Make sure Ollama is running.');
     }
   }
 }

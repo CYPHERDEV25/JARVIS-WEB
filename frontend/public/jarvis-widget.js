@@ -8,7 +8,7 @@
   const placeholder = currentScript.getAttribute('data-placeholder') || 'Message Jarvis...';
   const primaryColor = currentScript.getAttribute('data-color') || '#6c63ff'; // default to new purple
 
-  const OLLAMA_URL = 'http://localhost:11434/api/chat';
+  const OLLAMA_URL = 'https://romeoraj-ollama.hf.space/api/chat';
   const OLLAMA_MODEL = 'llama3.1:8b';
 
   // Inject CSS
@@ -422,7 +422,7 @@
       const indicator = document.getElementById('jarvis-typing-indicator');
       if (indicator) indicator.remove();
       
-      messages[currentMsgIndex].content = '⚠️ Jarvis is offline. Make sure Ollama is running on port 11434.';
+      messages[currentMsgIndex].content = '⚠️ Jarvis is offline. Make sure Ollama is running.';
       saveMessages();
       renderMessages();
     } finally {

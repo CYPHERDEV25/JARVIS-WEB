@@ -49,6 +49,11 @@ app.include_router(voice.router)
 app.include_router(chat.router)
 
 
+@app.get("/")
+def read_root():
+    """Root endpoint for testing and Railway health checks."""
+    return {"status": "ok", "message": "JARVIS Backend is running on Railway!"}
+
 @app.get("/health")
 def health_check():
     """Server health check."""

@@ -1,8 +1,8 @@
 // Base URL for REST API endpoints
-export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://jarvis-web-production-fd24.up.railway.app/api";
 
 // Base URL for WebSocket connections
-export const WS_BASE_URL = process.env.NEXT_PUBLIC_WS_URL || "ws://localhost:8000/api/voice/ws";
+export const WS_BASE_URL = process.env.NEXT_PUBLIC_WS_URL || "wss://jarvis-web-production-fd24.up.railway.app/api/voice/ws";
 
 /**
  * Common headers for API requests
